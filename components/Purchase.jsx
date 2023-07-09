@@ -1,0 +1,44 @@
+'use client'
+import React from 'react'
+import { useStateContext } from '@/context/StateContext'
+import {AiOutlineMinus,AiOutlinePlus,AiFillStar,AiOutlineStar} from 'react-icons/ai'
+const Purchase = ({product}) => {
+  const {decQty,incQty,qty,onAdd}= useStateContext();
+  return (
+    <div className="product-detail-desc">
+     
+            <h1>{product.name}</h1>
+            <div className="reviews">
+          <AiFillStar/>
+          <AiFillStar/>
+          <AiFillStar/>
+          <AiFillStar/>
+          <AiOutlineStar/>
+          <p>(20)</p>
+            </div>
+            <h4>Details: </h4>
+            <p>{product.details}</p>
+            <p className="price">${product.price}</p>
+            <div className="quantity">
+              <h3>Quantity</h3>
+              <p className="quantity-desc">
+                <span className="minus" onClick={decQty}>
+                  <AiOutlineMinus/>
+                </span>
+                <span className="num">
+                  {qty}
+                </span>
+                <span className="plus" onClick={incQty}>
+                  <AiOutlinePlus/>
+                </span>
+              </p>
+            </div>
+            <div className="buttons">
+              <button type="button" className="add-to-cart" onClick={()=>onAdd(product,qty) }>Add To Cart!</button>
+              <button type="button" className="buy-now">Buy Now!</button>
+            </div>
+          </div>
+  )
+}
+
+export default Purchase
