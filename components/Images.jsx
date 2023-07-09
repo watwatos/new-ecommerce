@@ -12,7 +12,7 @@ const Images = ({product}) => {
             <div className="small-images-container">
               
               { product.image?.map((item,i)=>(
-                <img src={item.asset.url} className={i===index ? 'small-image selected-image':'small-image'} onMouseEnter={()=>setIndex(i)} />
+                <img key={item._id} src={item.asset.url} className={i===index ? 'small-image selected-image':'small-image'} onMouseEnter={()=>setIndex(i)} />
               ))}
               
             </div>
