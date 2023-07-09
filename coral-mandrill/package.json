@@ -1,4 +1,5 @@
 {
+  
   "name": "coral-mandrill",
   "private": true,
   "version": "1.0.0",
@@ -38,4 +39,5 @@
     "bracketSpacing": false,
     "singleQuote": true
   }
+  
 }
