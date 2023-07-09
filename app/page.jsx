@@ -5,8 +5,8 @@ import {client} from '@/lib/client'
 import { getProducts,getBanners } from '@/coral-mandrill/sanity-utils';
 
 async function Home(){
-const products = await getProducts();
-const banners = await getBanners();
+let products = await getProducts();
+let banners = await getBanners();
   return (
     <div>
       <HeroBanner heroBanner={banners.length && banners[0]}/>
@@ -20,12 +20,8 @@ const banners = await getBanners();
       </div>
       <div className='products-container'>
           
-      {products.map((prod)=>
-        <Product  
-        key={prod._id}
-        product={prod}
-        
-        />)}
+      {products.map((item)=>
+        <Product key={item._id} product={item}/>)}
         </div>
         <FooterBanner footerBanner={banners&& banners[0]}/>
     </div>
