@@ -1,5 +1,5 @@
 {
-  "homepage": "http://watwatos.github.io/ecommerce-sanity",
+  
   "name": "ecommerce",
   
   "version": "0.1.0",
@@ -16,10 +16,6 @@
   
     
   "start": "next start",
-
-  "predeploy":"npm run build",
-  
-  "deploy":"gh-pages -d build",
   
     
   "lint": "next lint"
@@ -47,7 +43,13 @@
   "react": "18.2.0",
   
     
-  "react-dom": "18.2.0"
+  "react-dom": "18.2.0",
+  
+    
+  "react-icons": "^4.10.1",
+  
+    
+  "react-toastify": "^9.1.3"
   
   },
   
