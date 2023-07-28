@@ -9,7 +9,7 @@ let products = await getProducts();
 let banners = await getBanners();
   return (
     <div>
-      <HeroBanner heroBanner={banners.length && banners[0]}/>
+      <HeroBanner heroBanner={banners.length && banners[0]} />
       
       <div className='products-heading'>
         <h1>Best sellers</h1>
