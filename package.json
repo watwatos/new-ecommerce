@@ -12,7 +12,7 @@
   "dev": "next dev",
   
     
-  "build": "next build --output public",
+  "build": "sanity build public -y",
   
     
   "start": "next start",
